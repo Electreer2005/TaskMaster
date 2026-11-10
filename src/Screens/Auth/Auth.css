@@ -1,0 +1,385 @@
+/* ==========================================
+   SPLASH SCREEN
+   ========================================== */
+.Splash-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+.Splash-logo {
+  width: 250px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.Splash-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.Splash-subtitle {
+  font-size: 1rem;
+  color: var(--text-tertiary);
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+}
+
+.Splash-button {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  background-color: var(--tm-primary);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.1s;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.Splash-button:hover {
+  background-color: var(--tm-primary-dark);
+  transform: scale(1.02);
+}
+
+/*****************************************
+    AUTHENTICATION SCREENS
+    *****************************************/
+
+.Auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Login-container,
+.Register-container,
+.Forgot-container {
+  width: 400px;
+  padding: 40px;
+  background-color: var(--bg-secondary);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.Login-title,
+.Register-title,
+.Forgot-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.Login-label, .Register-label, .Forgot-label{
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.Login-group,
+.Register-group,
+.Forgot-group {
+  margin-bottom: 22px;
+}
+
+.Input-box{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border: 1px solid var(--gray-400);
+  border-radius: 10px;
+  background-color:  var(--bg-primary);
+  transition: 0.3s;
+}
+
+.Input-box:focus-within{
+  border-color: var(--tm-primary);
+  box-shadow: 0 0 5px var(--tm-primary);
+}
+
+.Input-box i{
+  margin: 0 10px;
+  color: var(--gray-400);
+  font-size: 18px;
+}
+
+.Login-input, .Register-input, .Forgot-input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+  color: var(--text-primary);
+  padding: 0 12px; 
+}
+
+.Login-input::placeholder, .Register-input::placeholder, .Forgot-input::placeholder{
+  color: var(--text-tertiary);
+  font-size: 14px;
+}
+
+.forgot-password{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  margin: 5px 0 25px;
+}
+
+.forgot-password label{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.checkbox{
+  width: 16px;
+  height: 16px;
+  accent-color: var(--tm-primary);
+  cursor: pointer;
+}
+
+.forgot-password a{
+  color: var(--tm-primary);
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.forgot-password a:hover{
+  color: var(--tm-primary-dark);
+  text-decoration: underline;
+}
+
+.Login-button, .Register-button, .Forgot-button{
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--tm-primary), var(--tm-primary-dark));
+  color:#fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.Login-button:hover, .Register-button:hover, .Forgot-button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.Login-button:active, .Register-button:active, .Forgot-button:active{
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.Login-error, .Register-error, .Forgot-error{
+  color: var(--tm-danger);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* -------------------------
+   REDES SOCIALES
+------------------------- */
+
+.Social {
+  margin-top: 25px;
+}
+
+.parrafo-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  color: #999;
+  font-size: 14px;
+}
+
+.parrafo-social::before,
+.parrafo-social::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+
+/* Contenedor de botones */
+
+.buttons-social {
+  display: flex;
+  gap: 12px;
+}
+
+
+/* Botones */
+
+.buttons-social button {
+  position: relative;
+
+  flex: 1;
+  height: 45px;
+  width: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 15px;
+
+  border: 1px solid #ddd;
+  border-radius: 9px;
+
+  background: #fff;
+  color: #444;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: none;
+
+  transition: 
+    border-color 0.25s,
+    color 0.25s,
+    box-shadow 0.25s,
+    transform 0.25s;
+}
+
+
+/* Logo */
+
+.social-icon {
+  position: absolute;
+  left: 15px;
+
+  font-size: 17px;
+}
+
+
+/* Hover general */
+
+.buttons-social button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Google */
+
+.buttons-social .Google:hover {
+  border-color: #db4437;
+  color: #db4437;
+}
+
+
+/* Facebook */
+
+.buttons-social .Facebook:hover {
+  border-color: #4267b2;
+  color: #4267b2;
+}
+
+.Register-Account, .Login-Account{
+  margin-top: 25px;
+  text-align: center;
+}
+
+.Register-p, .Login-p{
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.Login-link, .Register-link{
+  color: var(--tm-primary);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.Login-link:hover, .Register-link:hover{
+  color: var(--tm-primary-dark);
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+
+  .buttons-social {
+    flex-direction: column;
+  }
+
+  .buttons-social button {
+    width: 100%;
+  }
+
+}
+
+.Forgot-back{
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-volver{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 20px;
+  background-color: var(--tm-primary);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.1s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-volver:hover {
+  background-color: var(--tm-primary-dark);
+  transform: scale(1.02);
+}
+
+.btn-success{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 20px;
+  background-color: var(--tm-success);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.1s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-success:hover {
+  background-color: var(--tm-success-dark);
+  transform: scale(1.02);
+}

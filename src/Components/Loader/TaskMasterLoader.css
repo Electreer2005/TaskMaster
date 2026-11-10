@@ -1,0 +1,109 @@
+.tm-loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  gap: var(--space-4);
+}
+
+.tm-loader-ring {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--tm-primary) 0%, var(--tm-info) 100%);
+  animation: tm-pulse 2s ease-in-out infinite;
+  box-shadow: var(--shadow-primary);
+}
+
+.tm-loader-ring-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--tm-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tm-loader-ring-inner::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--tm-primary-light) 0%, var(--tm-info) 100%);
+  animation: tm-spin 1.5s linear infinite;
+}
+
+.tm-loader-text {
+  color: var(--tm-surface);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  animation: tm-fade 1.5s ease-in-out infinite;
+}
+
+.tm-loader-progress {
+  width: 200px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.tm-loader-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(90deg, var(--tm-primary-light), var(--tm-success));
+  border-radius: var(--radius-full);
+  animation: tm-progress 2s ease-in-out infinite;
+}
+
+@keyframes tm-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes tm-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tm-fade {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes tm-progress {
+  0% {
+    left: -40%;
+  }
+  100% {
+    left: 100%;
+  }
+}
